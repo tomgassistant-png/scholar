@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Scholar: studies</title><style>:root{--ink:#1f2529;--muted:#5f6b70;--accent:#1f5f7a;--accent2:#9a6420;--gold:#b08a3e;--bg:#fbf9f3;--paper:#fff;--box:#f4efe2;--line:#e4dccb;
+--serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;--sans:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65}
+main{max-width:1000px;margin:0 auto;padding:0 1.2rem 4rem}
+main>section,main>header,main>nav,main>p{max-width:1000px}
+p,.lesson>ul,.lesson>ol,h3,dl{max-width:720px}
+h1,h2,h3,h4{font-family:var(--sans);line-height:1.22;color:#172a33}
+h1{font-size:3rem;margin:.2rem 0;letter-spacing:-.01em}
+h2{font-size:1.85rem;margin:.3rem 0 1rem}
+h3{font-size:1.2rem;margin:2rem 0 .4rem;color:var(--accent)}
+h4{margin:0 0 .5rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.09em;color:var(--accent)}
+p{margin:.75rem 0}
+a{color:var(--accent)}
+em{font-style:italic}
+/* title */
+.title{text-align:center;padding:3.2rem 1rem 2.4rem;margin:0 -1.2rem;background:linear-gradient(180deg,#123f52 0%,#1f5f7a 70%,#2a6f86 100%);color:#fff;border-bottom:6px solid var(--gold)}
+.title h1{color:#fff}
+.title .subtitle{color:#dcebf0;font-style:italic;font-size:1.2rem;max-width:640px;margin:.6rem auto}
+.title .byline{color:#b9d4de;font-size:.9rem;font-family:var(--sans)}
+.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:#f0d59a;font-family:var(--sans);margin:0}
+.intro{margin-top:2rem}
+.note{background:var(--box);padding:.85rem 1.1rem;border-left:4px solid var(--gold);font-size:.95rem;border-radius:0 6px 6px 0}
+/* toc */
+.toc{background:var(--paper);border:1px solid var(--line);padding:.6rem 1.4rem 1.2rem;margin:2rem 0;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.toc h2{margin:.8rem 0}
+.toc-cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.6rem}
+.toc-cards a{display:grid;grid-template-columns:2.2rem 1fr;grid-template-rows:auto auto;gap:0 .6rem;padding:.6rem .7rem;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);background:#fdfbf6;font-family:var(--sans);height:100%}
+.toc-cards a:hover{border-color:var(--accent);background:#f2f7f9}
+.tc-n{grid-row:1/3;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;border-radius:50%;width:2.1rem;height:2.1rem;font-weight:700}
+.tc-t{font-weight:600;font-size:.95rem;line-height:1.3}.tc-r{font-size:.8rem;color:var(--muted)}
+.toc-extra{list-style:none;padding-left:0;margin-top:1rem;border-top:1px dashed #ccc;padding-top:.7rem;font-size:.95rem;font-family:var(--sans);columns:2;column-gap:2rem}
+.toc-extra li{margin:.2rem 0;break-inside:avoid}
+/* lesson head */
+.lesson,.glance{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.lesson-no{margin:0;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;color:var(--gold);font-family:var(--sans);font-weight:700;display:flex;align-items:center;gap:.6rem}
+.lnum{display:inline-flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--gold);color:#fff;font-size:1.15rem;letter-spacing:0}
+.lrange{font-family:var(--sans);color:var(--muted);margin:-.6rem 0 1rem;font-size:.95rem}
+/* key-dates strip */
+.kd{margin:1rem 0 1.2rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem .5rem}
+.kd-h{font:700 .78rem var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:.3rem}
+.kd-track{list-style:none;margin:0;padding:.2rem 0 .5rem;display:flex;flex-wrap:wrap;row-gap:.9rem;position:relative}
+.kd-track li{flex:1 0 140px;max-width:190px;scroll-snap-align:start;position:relative;padding:1.35rem .7rem 0 0;font-family:var(--sans)}
+.kd-track li::before{content:"";position:absolute;left:0;right:0;top:.55rem;border-top:2px solid #c9d9df}
+.kd-track li::after{content:"";position:absolute;left:0;top:.2rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px #fff}
+.kd-y{display:block;font-weight:700;color:var(--accent);font-size:.92rem}
+.kd-t{display:block;font-size:.8rem;line-height:1.35;color:#3a464c}
+/* why it matters */
+.why{background:linear-gradient(135deg,#fff7e6,#fbf1dc);border:1px solid #ecd9ad;border-left:6px solid var(--gold);border-radius:10px;padding:.8rem 1.1rem;margin:1.2rem 0 1.6rem;max-width:760px}
+.why-h{font:700 .78rem var(--sans);text-transform:uppercase;letter-spacing:.1em;color:#8a6420}
+.why p{margin:.35rem 0 .2rem;font-size:1rem}
+/* figures */
+figure{margin:2rem 0;text-align:center}
+figure.img img{max-width:100%;height:auto;max-height:620px;width:auto;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+figure.img.wide img{width:100%;max-height:none}
+figure.img{max-width:760px}
+figure.viz{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.8rem;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.viz-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.viz-scroll>svg{display:block;width:100%;height:auto}
+figcaption{font-size:.87rem;color:#3d484d;text-align:left;margin-top:.6rem;line-height:1.5;font-family:var(--sans);max-width:900px}
+.fignum{font-weight:700;color:var(--accent)}
+.src{display:block;color:var(--muted);font-size:.78rem;margin-top:.25rem}
+.seq{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.seq-p svg{width:100%;height:auto;display:block}
+/* boxes */
+.box{background:var(--box);border-radius:10px;padding:.9rem 1.2rem;margin:1.4rem 0;font-size:.95rem;max-width:760px}
+.box ul,.box ol{margin:.2rem 0;padding-left:1.3rem}.box li{margin:.25rem 0}
+.terms{border-left:5px solid var(--gold)}
+.questions{border-left:5px solid #7a3b1f;background:#f8f0ea}
+dl{margin:0}dt{font-weight:bold;margin-top:.55rem;font-family:var(--sans);font-size:.93rem}dd{margin:.1rem 0 0 1rem}
+details.q{background:#fff;border:1px solid #e6d5c9;border-radius:8px;margin:.5rem 0;overflow:hidden}
+details.q summary{cursor:pointer;padding:.6rem .8rem .6rem 2.8rem;position:relative;list-style:none;font-size:.97rem}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"Show answer ▾";display:block;font:600 .75rem var(--sans);color:#7a3b1f;margin-top:.25rem}
+details.q[open] summary::after{content:"Hide answer ▴"}
+.qn{position:absolute;left:.7rem;top:.6rem;width:1.5rem;height:1.5rem;border-radius:50%;background:#7a3b1f;color:#fff;font:700 .8rem/1.5rem var(--sans);text-align:center}
+.ans{padding:.1rem .9rem .8rem 2.8rem;font-size:.95rem;border-top:1px dashed #e6d5c9;background:#fffaf5}
+[lang=fa],[lang=ar]{font-family:"Noto Naskh Arabic","Geeza Pro","Times New Roman",serif;font-weight:normal;direction:rtl;unicode-bidi:isolate;font-size:1.1em;color:#5a3d12}
+/* timeline appendix */
+.appendix{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+table.vt{width:100%;max-width:800px;border-collapse:collapse;font-size:.93rem;font-family:var(--sans)}
+.vt td{padding:.4rem .6rem;vertical-align:top;border:none}
+.vt td:first-child{white-space:nowrap;font-weight:700;color:var(--accent);width:6.5rem;text-align:right;position:relative;padding-right:1.4rem}
+.vt td:first-child::after{content:"";position:absolute;right:-.36rem;top:.72rem;width:.72rem;height:.72rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--bg)}
+.vt td:last-child{border-left:2px solid #d6c9a6;padding-left:1.2rem}
+.small{font-size:.88rem;color:#555}
+.reading li{margin:.5rem 0}
+.print-only{display:none}
+@media (max-width:700px){
+ body{font-size:17px}h1{font-size:2.1rem}h2{font-size:1.45rem}main{padding:0 .85rem 3rem}.title{margin:0 -.85rem;padding:2.2rem .8rem 1.8rem}
+ .viz-scroll>svg.map{min-width:680px}.viz-scroll>svg.chart{min-width:640px}.viz-scroll>svg.tree-svg{min-width:720px}
+ .viz-scroll::after{content:"← swipe to see the whole figure →";display:block;text-align:center;font:.72rem var(--sans);color:var(--muted);padding-top:.2rem}
+ .seq{grid-template-columns:1fr}
+ figure.viz{padding:.5rem;margin-left:-.4rem;margin-right:-.4rem}
+ .toc-extra{columns:1}
+ .vt td:first-child{width:4.6rem;white-space:normal}
+ .kd-track{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity}.kd-track li{flex:0 0 132px}
+}
+@media print{
+ body{background:#fff;font-size:11pt}main{max-width:none;padding:0}
+ .title{background:none;color:#000;border-bottom:3px solid var(--gold)}.title h1{color:#000}.title .subtitle,.title .byline{color:#333}.kicker{color:#8a6420}
+ .toc{break-after:page}.lesson,.glance{break-before:page;border:none}
+ figure,.why,.kd,details,.box{break-inside:avoid}
+ .viz-scroll{overflow:visible}.viz-scroll>svg{min-width:0!important}
+ .viz-scroll::after{display:none}
+ .kd-track{flex-wrap:wrap;overflow:visible}.kd-track li{flex-basis:25%}
+ details.q summary::after{display:none}
+ .print-only{display:block}
+ a{color:inherit;text-decoration:none}
+ figure.viz{box-shadow:none}
+}
+/* reading column centred; figures break out */
+.intro>*,.lesson>*,.glance>*,.appendix>*{max-width:760px;margin-left:auto;margin-right:auto}
+.lesson>figure.viz,.glance>figure.viz,.appendix>figure.viz{max-width:1000px}
+.lesson>figure.img.wide{max-width:900px}
+.title p{max-width:none;margin-left:auto;margin-right:auto}
+.toc{max-width:1000px}
+.seq{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+figcaption{margin-left:auto;margin-right:auto}
+figure.viz figcaption{max-width:none;padding:0 .3rem}
+ .toc-cards li a{display:block} .tc-r{display:block}</style></head><body><main>
+<header class="title"><p class="kicker">Scholar</p><h1>Studies</h1><p class="byline">Prepared for Tom Goldberger</p></header>
+<nav class="toc"><ol class="toc-cards"><li><a href="kagame-rise-from-exile.html"><span class="tc-t">Paul Kagame’s Rise from Exile</span><span class="tc-r">October 2026 · Kagame from a refugee camp in Uganda to the presidency of Rwanda, 1957–2003.</span></a></li><li><a href="operation-savannah.html"><span class="tc-t">Operation Savannah</span><span class="tc-r">October 2026 · South Africa’s intervention in Angola, 1975–76, told from Pretoria’s side.</span></a></li><li><a href="timur-in-the-european-imagination.html"><span class="tc-t">Timur in the European Imagination</span><span class="tc-r">October 2026 · How Europe pictured Timur, from Clavijo’s embassy to Marlowe, the operas and Poe.</span></a></li><li><a href="house-of-timur-visual.html"><span class="tc-t">The House of Timur (visual edition)</span><span class="tc-r">September 2026 · The Timurid dynasty with maps, charts and images.</span></a></li><li><a href="house-of-timur-course.html"><span class="tc-t">The House of Timur (text edition)</span><span class="tc-r">September 2026 · The earlier text version of the Timurid course.</span></a></li></ol></nav></main></body></html>
